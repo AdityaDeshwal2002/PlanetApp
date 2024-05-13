@@ -1,7 +1,13 @@
 package com.example.planetapp;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,5 +45,18 @@ public class MainActivity extends AppCompatActivity {
 
         PlanetcstmAdapter planetcstmAdapter = new PlanetcstmAdapter(planetsArrayList,MainActivity.this);
         listView.setAdapter(planetcstmAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,
+                        planetcstmAdapter.getItem(position).getPlanetName()
+                        +"  "+((TextView)view.findViewById(R.id.planetsName)).getText(),
+                        Toast.LENGTH_LONG).show();
+//                TextView textView = view.findViewById(R.id.planetsName);
+//                String planetName = textView.getText().toString();
+//                System.out.println("View "+planetName);
+            }
+        });
     }
 }
