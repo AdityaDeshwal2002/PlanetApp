@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="planetsInfo">
+        <item index="0">
+            <item index="0">Mercury</item>
+            <item index="1">0 Moons</item>
+            <item index="2">@drawable/mercury</item>
+        </item>
+        <item index="1">
+            <item index="0">Venus</item>
+            <item index="1">0 Moons</item>
+            <item index="2">@drawable/venus</item>
+        </item>
+        <item index="2">
+            <item index="0">Earth</item>
+            <item index="1">1 Moons</item>
+            <item index="2">@drawable/earth</item>
+        </item>
+        <item index="3">
+            <item index="0">Mars</item>
+            <item index="1">2 Moons</item>
+            <item index="2">@drawable/mars</item>
+        </item>
+        <item index="4">
+            <item index="0">Jupiter</item>
+            <item index="1">95 Moons</item>
+            <item index="2">@drawable/jupiter</item>
+        </item>
+        <item index="5">
+            <item index="0">Saturn</item>
+            <item index="1">146 Moons</item>
+            <item index="2">@drawable/saturn</item>
+        </item>
+        <item index="6">
+            <item index="0">Uranus</item>
+            <item index="1">26 Moons</item>
+            <item index="2">@drawable/uranus</item>
+        </item>
+        <item index="7">
+            <item index="0">Neptune</item>
+            <item index="1">16 Moons</item>
+            <item index="2">@drawable/neptune</item>
+        </item>
+        <item index="8">
+            <item index="0">Pluto</item>
+            <item index="1">5 Moons</item>
+            <item index="2">@drawable/pluto</item>
+        </item>
+    </array>
+</resources>

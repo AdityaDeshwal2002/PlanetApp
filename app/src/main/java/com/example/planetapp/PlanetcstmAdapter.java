@@ -29,9 +29,8 @@ public class PlanetcstmAdapter extends ArrayAdapter<Planet> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Planet planet = getItem(position);
-
         MyViewHolder myViewHolder = null;
-        final View result;
+        final View result; //final means it can't be changed
 
         if (convertView == null) {
             myViewHolder = new MyViewHolder();
@@ -43,12 +42,15 @@ public class PlanetcstmAdapter extends ArrayAdapter<Planet> {
             convertView.setTag(myViewHolder);
         }
         else {
-
-            Toast.makeText(context, "Help", Toast.LENGTH_SHORT).show();
+             myViewHolder = (MyViewHolder) convertView.getTag();
+             result = convertView;
         }
+        assert planet != null;
+        myViewHolder.planetText.setText(planet.getPlanetName());
+        myViewHolder.moonText.setText(planet.getPlanetMoons());
+        myViewHolder.planetImage.setImageResource(planet.getPlanetImage());
 
-        return convertView;
-
+        return result;
     }
 
     private static class MyViewHolder{
